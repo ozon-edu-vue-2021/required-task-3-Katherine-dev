@@ -80,8 +80,8 @@ export default {
     
     onClick(event) {
         let tableId = null;
-        if (event.target?.parentElement?.parentElement?.parentElement.classList.contains("employer-place")) {
-            tableId = event.target?.parentElement?.parentElement?.parentElement?.id;
+        if (event.target?.closest(".employer-place")) {
+            tableId = event.target.closest(".employer-place").id;
             this.$emit("onClick", tableId)
         } else {
             this.$emit("outsideClick")

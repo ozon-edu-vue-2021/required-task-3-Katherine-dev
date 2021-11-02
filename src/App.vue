@@ -37,6 +37,7 @@ export default {
       },
       outsideClick() {
           this.isProfileOpened = false;
+          this.person = null;
       }
   },
 };
